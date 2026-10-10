@@ -33,6 +33,14 @@ jobs:
       - name: Run tests
         run: npm test
       - name: Build for GitHub Pages
+        env:
+          VITE_FIREBASE_API_KEY: ${{ vars.VITE_FIREBASE_API_KEY }}
+          VITE_FIREBASE_AUTH_DOMAIN: ${{ vars.VITE_FIREBASE_AUTH_DOMAIN }}
+          VITE_FIREBASE_PROJECT_ID: ${{ vars.VITE_FIREBASE_PROJECT_ID }}
+          VITE_FIREBASE_APP_ID: ${{ vars.VITE_FIREBASE_APP_ID }}
+          VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ vars.VITE_FIREBASE_MESSAGING_SENDER_ID }}
+          VITE_FIREBASE_FUNCTIONS_REGION: ${{ vars.VITE_FIREBASE_FUNCTIONS_REGION }}
+          VITE_FIREBASE_RECAPTCHA_SITE_KEY: ${{ vars.VITE_FIREBASE_RECAPTCHA_SITE_KEY }}
         run: npm run build -- --base=/FuelTill/
       - name: Configure Pages
         uses: actions/configure-pages@v5
