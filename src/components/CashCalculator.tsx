@@ -19,7 +19,7 @@ function parseAmount(s:string):number|null{if(!/^\d+(?:\.\d{1,2})?$/.test(s.trim
 const displayTime=(date:string)=>new Date(date).toLocaleString('en-NZ',{dateStyle:'medium',timeStyle:'short'});
 export default function CashCalculator(){
   const [w,setW]=useState<Workspace>(loadWorkspace);
-  const [page,setPage]=useState<Page>('dashboard');
+  const [page,setPage]=useState<Page>('cloud');
   const [safeQty,setSafeQty]=useState<number[]>(blankCount);
   const [expected,setExpected]=useState('');
   const [newStationName,setNewStationName]=useState('');
