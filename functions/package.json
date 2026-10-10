@@ -1,0 +1,9 @@
+{
+  "name": "fueltill-cloud",
+  "private": true,
+  "version": "1.1.0",
+  "main": "index.js",
+  "engines": { "node": "22" },
+  "scripts": { "test": "node --test tests/*.test.js" },
+  "dependencies": { "firebase-admin": "^13.0.0", "firebase-functions": "^6.0.0" }
+}

@@ -1,0 +1,1 @@
+{"root":["./src/main.tsx","./src/components/cashcalculator.tsx","./src/components/cloudoperations.tsx","./src/lib/cash.test.ts","./src/lib/cash.ts","./src/lib/cloud.ts","./src/lib/mobileprint.ts","./src/lib/receipts.ts","./src/lib/records.test.ts","./src/lib/records.ts","./src/lib/storage.ts","./src/lib/worksheet.ts","./src/types/cash.ts"],"errors":true,"version":"5.9.3"}

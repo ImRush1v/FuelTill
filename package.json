@@ -1,0 +1,28 @@
+{
+  "name": "fueltill",
+  "private": true,
+  "version": "1.1.0-beta",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run && npm --prefix functions test",
+    "test:frontend": "vitest run",
+    "test:backend": "npm --prefix functions test"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "firebase": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.4.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0"
+  },
+  "description": "FuelTill phone and PC app with optional secured multi-company Firebase operations and separate receipts"
+}

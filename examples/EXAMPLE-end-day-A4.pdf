@@ -1,0 +1,54 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 652 >>
+stream
+BT /F1 10 Tf 38 793.89 Td 14 TL
+(FUELTILL) Tj
+T* (END OF DAY - CASH MOVEMENT) Tj
+T* (Demo Fuel Station) Tj
+T* (Date: 2026-10-10) Tj
+T* (-----------------------------) Tj
+T* (SAFE DROPS) Tj
+T* (1. POS 1 Shift 1  $400.00) Tj
+T* (SAFE DROP TOTAL: $400.00) Tj
+T* (-----------------------------) Tj
+T* (SHIFT CLOSINGS) Tj
+T* (POS 1 Shift 1  $50.00 drop) Tj
+T* (FINAL DROP TOTAL: $50.00) Tj
+T* (-----------------------------) Tj
+T* (DEPOSITS RECORDED: $450.00) Tj
+T* (Shifts closed: 1) Tj
+T* (Safe drops: 1) Tj
+T* () Tj
+T* (NOTE: cash movement report only.) Tj
+T* (POS/bank reconciliation not verified.) Tj
+T* () Tj
+T* (Manager signature: ____________) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000183 00000 n 
+0000000886 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1018
+%%EOF

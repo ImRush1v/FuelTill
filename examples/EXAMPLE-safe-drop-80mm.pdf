@@ -1,0 +1,51 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 553 >>
+stream
+BT /F1 8 Tf 9 241 Td 12 TL
+(FUELTILL) Tj
+T* (SAFE DROP) Tj
+T* (Demo Fuel Station) Tj
+T* (Date: 2026-10-10) Tj
+T* (Register: POS 1) Tj
+T* (Shift: Shift 1) Tj
+T* (Cashier: Demo Cashier) Tj
+T* (Recorded: 9/10/2026, 6:00:00 pm) Tj
+T* (Reference: ff87c13e-754) Tj
+T* (-----------------------------) Tj
+T* (NOTES DEPOSITED) Tj
+T* ($50   x    8  $400.00) Tj
+T* (-----------------------------) Tj
+T* (SAFE DROP TOTAL: $400.00) Tj
+T* () Tj
+T* (Cashier signature: ____________) Tj
+T* (Verified by: _________________) Tj
+T* (Confirm physical locker deposit.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 226.77 258] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000183 00000 n 
+0000000787 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+916
+%%EOF

@@ -1,0 +1,47 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function verified() { return request.auth != null && request.auth.token.email_verified == true; }
+    function member(orgId) { return verified() &&
+      exists(/databases/$(database)/documents/organizations/$(orgId)/members/$(request.auth.uid)) &&
+      get(/databases/$(database)/documents/organizations/$(orgId)/members/$(request.auth.uid)).data.status == 'active'; }
+    function membership(orgId) {
+      return get(/databases/$(database)/documents/organizations/$(orgId)/members/$(request.auth.uid)).data;
+    }
+    function manager(orgId) { return member(orgId) && membership(orgId).role in ['owner','manager']; }
+    function assigned(orgId,stationId) {
+      return member(orgId) && (manager(orgId) || stationId in membership(orgId).stationIds);
+    }
+    match /users/{uid}/orgs/{orgId} {
+      allow get, list: if verified() && request.auth.uid == uid;
+      allow write: if false;
+    }
+    match /organizations/{orgId} {
+      allow get: if member(orgId);
+      allow list, write: if false;
+      match /members/{memberId} {
+        allow get: if member(orgId) && (request.auth.uid == memberId || manager(orgId));
+        allow list: if manager(orgId);
+        allow write: if false;
+      }
+      match /stations/{stationId} {
+        allow get, list: if assigned(orgId, stationId);
+        allow write: if false;
+        match /shifts/{shiftKey} {
+          allow get, list: if assigned(orgId, stationId);
+          allow write: if false;
+          match /safeDrops/{dropId} {
+            allow get, list: if assigned(orgId, stationId);
+            allow write: if false;
+          }
+        }
+        match /audit/{eventId} {
+          allow get, list: if manager(orgId);
+          allow write: if false;
+        }
+      }
+    }
+    match /invitations/{tokenHash} { allow read, write: if false; }
+    match /{path=**} { allow read, write: if false; }
+  }
+}

@@ -1,0 +1,68 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Length 1055 >>
+stream
+BT /F1 7 Tf 9 409 Td 11 TL
+(FUELTILL) Tj
+T* (END OF SHIFT) Tj
+T* (Demo Fuel Station) Tj
+T* (Date: 2026-10-10) Tj
+T* (Register: POS 1) Tj
+T* (Shift: Shift 1) Tj
+T* (Cashier: Demo Cashier) Tj
+T* (Closed: 9/10/2026, 10:00:00 pm) Tj
+T* (-----------------------------) Tj
+T* (Counted in drawer: $461.50) Tj
+T* (Final drop: $160.00) Tj
+T* (Drawer remaining: $301.50) Tj
+T* (Carry forward: $1.50) Tj
+T* (POS expected: Not provided) Tj
+T* (-----------------------------) Tj
+T* (FINAL DROP NOTES) Tj
+T* ($20   x    3  $60.00) Tj
+T* ($50   x    2  $100.00) Tj
+T* (-----------------------------) Tj
+T* (FINAL DRAWER COUNTS) Tj
+T* (10c   x    0  $0.00) Tj
+T* (20c   x    0  $0.00) Tj
+T* (50c   x    1  $0.50) Tj
+T* ($1    x    1  $1.00) Tj
+T* ($2    x    0  $0.00) Tj
+T* ($5    x    0  $0.00) Tj
+T* ($10   x   30  $300.00) Tj
+T* ($20   x    0  $0.00) Tj
+T* ($50   x    0  $0.00) Tj
+T* ($100  x    0  $0.00) Tj
+T* (TOTAL LEFT: $301.50) Tj
+T* () Tj
+T* (Cashier signature: ____________) Tj
+T* (Manager signature: ____________) Tj
+T* (Verify against physical cash.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 164.41 425] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000183 00000 n 
+0000001290 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1419
+%%EOF
