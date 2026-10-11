@@ -1,0 +1,61 @@
+name: Build FuelTill iOS simulator (development)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ios-simulator.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  ios-simulator:
+    runs-on: macos-26
+    timeout-minutes: 45
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v4
+      - name: Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Check Xcode environment
+        run: |
+          xcodebuild -version
+          xcrun simctl list devices available | head -30
+      - name: Install frontend dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
+      - name: Build web assets for native iOS
+        run: npm run build -- --base=./
+      - name: Install Capacitor iOS dependencies
+        run: npm install --no-save @capacitor/core@8 @capacitor/cli@8 @capacitor/ios@8
+      - name: Generate iOS native project
+        run: npx cap add ios
+      - name: Sync native assets
+        run: npx cap sync ios
+      - name: Build unsigned simulator application
+        run: |
+          xcodebuild -project ios/App/App.xcodeproj \
+            -scheme App \
+            -configuration Debug \
+            -sdk iphonesimulator \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath ios-build \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+      - name: Package iOS simulator build
+        run: |
+          cd ios-build/Build/Products/Debug-iphonesimulator
+          zip -qr "$GITHUB_WORKSPACE/FuelTill-iOS-Simulator.zip" App.app
+      - name: Upload iOS simulator app
+        uses: actions/upload-artifact@v4
+        with:
+          name: FuelTill-iOS-Simulator-Test
+          path: FuelTill-iOS-Simulator.zip
+          retention-days: 7
+          if-no-files-found: error
